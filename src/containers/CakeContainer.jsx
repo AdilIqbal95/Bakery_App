@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CakeComponent from "../components/CakeComponent.jsx";
 
 
 const CakeContainer = () => {
@@ -44,11 +45,16 @@ const CakeContainer = () => {
             rating: 5
         }
     ])
-    
-    console.log(cakeArr);
+
+    const [victoriaSpongeObj,teaLoafObj,carrotCakeObj] = cakeArr
+
+    console.log(victoriaSpongeObj);
     return (
         <>
-
+            <CakeComponent name={victoriaSpongeObj.cakeName} ingredients = {victoriaSpongeObj.ingredients} price={victoriaSpongeObj.price} rating={victoriaSpongeObj.rating}/>
+            <CakeComponent name={teaLoafObj.cakeName} ingredients = {teaLoafObj.ingredients} price={teaLoafObj.price} rating={teaLoafObj.rating}/>
+            <CakeComponent name={carrotCakeObj.cakeName} ingredients = {carrotCakeObj.ingredients} price={carrotCakeObj.price} rating={carrotCakeObj.rating}/>
+            
         </>
     )
 
